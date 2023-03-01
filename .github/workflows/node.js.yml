@@ -16,7 +16,9 @@ jobs:
     - run: npm ci
     - run: npx hardhat compile
     - name: Start local node
-      run: npx hardhat node
+      run: npx hardhat node &
+    - name: Wait for local node to start
+      run: npx hardhat node --waitForUpgrade
     - name: Run tests
       run: npx hardhat test
     - name: Check code coverage
