@@ -22,10 +22,3 @@ jobs:
     - name: Check code coverage
       run: npx hardhat coverage
       
-networks:
-  hardhat:
-    chainId: 1337
-    accounts:
-      mnemonic: "test test test test test test test test test test test junk"
-  localhost:
-    url: "http://localhost:8545" 
